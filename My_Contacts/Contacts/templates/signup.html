@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	h1 {text-align:center}
+	div {text-align:center}
+	.bluediv{
+		margin:10px 1px 15px -100px
+	}
+	.bluediv1{
+		margin:10px 1px 15px -125px
+	}
+	.bluediv2{
+		margin:10px 1px 15px -125px
+	}
+	.fdiv{
+		margin:10px 1px 15px 65px;
+		font-size:13px
+	}
+	body{
+		background-color:#96f3fb;
+		text-align:center
+	}
+	</style>
+</head>
+<body>
+	<h1>Sign Up</h1>
+	<form method="POST" >{% csrf_token %}
+
+		 </div>
+			Already have an account? <a href="signin.html">Sign in</a>
+		</div>
+			</br>
+		<div class="bluediv1">
+			<label>Email</label>
+		</div>
+		<div>
+			{{form.email}}
+		</div>
+		</br>
+		<div class="bluediv">
+			<label>Password</label>
+		</div>
+		<div>
+			{{form.password}}
+		</div>
+		</br>
+		<div class="bluediv2">
+			<label>Code</label>
+		</div>
+		<div>
+		{{ form.scode }}
+		</div>
+		</br>
+		<div class="btn">
+			<button type="submit" value=submit">
+				Sign Up
+			</button>
+		</div>
+		<div>
+			{% for message in messages %}
+			<h2>
+				{{ message }}
+			</h2>
+			{% endfor %}
+		</div>
+	</form>
+</body>
+</html>
+

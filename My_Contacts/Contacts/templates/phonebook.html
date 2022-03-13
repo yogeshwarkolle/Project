@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	h1 {text-align:center}
+	div {text-align:center}
+	.bluediv1{
+		margin:10px 1px 15px -15px
+	}
+	body{
+		background-color:#96f3fb;
+		text-align:center
+	}
+	.save{
+		margin:10px 1px 15px 170px
+	}
+	</style>
+</head>
+<body>
+	
+	<form method="POST" >{% csrf_token %}
+	</br>
+	<h2>Add Contacts</h2>
+	<label>Name:</label>
+	{{ form.name }}<br><br>
+	<label>Ph No:</label>
+	{{ form.phn }}<br><br>
+	<label>Email Id:</label>
+	{{ form.email }}<br><br>
+	<input class="save" type="submit" value="Save">
+	</form>
+	<br>
+	<a href="dispaly.html">Display Contacts</a>
+
+
+</body>
+</html>

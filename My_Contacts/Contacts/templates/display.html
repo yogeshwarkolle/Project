@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Contacts</title>
+	<style>
+		body{
+		background-color:#96f3fb;
+		text-align:center
+	}
+	table, th, td{
+	border:1px solid black;
+	border-collapse:colapse;
+	}
+	table.center{
+	margin-left:auto;
+	margin-right:auto;
+	}
+
+	</style>
+</head>
+<body>
+<h2>Contacts List</h2>
+<table class="center" width="90%">
+		<thead>
+		<tr>
+			<th>Name</th>
+			<th>Ph No</th>
+			<th>Email id</th>
+		</tr>
+		</thead>
+		<tbody>
+		{% for i in obj %}
+		<tr>
+			<td> {{i.name}}</td>
+			<td>{{i.phn}}</td>
+			<td>{{i.email}}</td>
+		</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>
